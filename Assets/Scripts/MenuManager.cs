@@ -1,11 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("¹CÀ¸³õ´º");
+        SceneManager.LoadScene("éŠæˆ²å ´æ™¯");
     }
 
     public void QuitGame() 
