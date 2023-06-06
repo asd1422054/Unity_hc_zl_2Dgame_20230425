@@ -34,15 +34,30 @@ public class ControlSystem : MonoBehaviour
     private void Move()
 	{
         float h = Input.GetAxis("Horizontal");
-        print("水平值:" + h);
+        //print("水平值:" + h);
 
         float v = Input.GetAxis("Vertical");
-        print("垂直值:" + v);
+        //print("垂直值:" + v);
 
         rig.velocity = new Vector2(h, v) * moveSpeed;
 
         //h 不等於 0 或者 v 不等於 0 要走路
         ani.SetBool(parRun, h != 0 || v!=0 );
+
+        //print(Input.GetKeyDown(KeyCode.A));
+
+        if (Input.GetKeyDown(KeyCode.A) ||Input.GetKeyDown(KeyCode.LeftArrow))
+		{
+            //print("玩家按下A");
+            transform.eulerAngles = new Vector3(0, 180, 0);
+		}
+
+		if (Input.GetKeyDown(KeyCode.D) ||Input.GetKeyDown(KeyCode.RightArrow))
+		{
+            //print("玩家按下D");
+            transform.eulerAngles = new Vector3(0, 0, 0);
+		}
+
 	}
 
 }
