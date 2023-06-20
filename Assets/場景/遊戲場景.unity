@@ -33149,6 +33149,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dd49317f951924c91eab8cbca5f86f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &409765305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409765298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e877611333b12dd4d9cf4e09c33198e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 393ff022d8001ed4cb12dc70723d3cc0, type: 2}
+  prefabDamage: {fileID: 2337701944771235798, guid: e18c852f9cd09084290db9eebe90bc00, type: 3}
 --- !u!1 &426681749
 GameObject:
   m_ObjectHideFlags: 0
@@ -33788,6 +33802,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8672582127634102898, guid: 120f689aa7074c747801e28737c54747, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672582127634102898, guid: 120f689aa7074c747801e28737c54747, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8943823232353094333, guid: 120f689aa7074c747801e28737c54747, type: 3}
       propertyPath: m_Name
       value: "\u7280\u725B"
@@ -34109,7 +34131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22488902, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22488902, guid: 8a005a9e0713f4cc1b5ad29fb07657d3, type: 3}
       propertyPath: m_AnchorMax.x
@@ -34276,7 +34298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 2.5
-  prefabWeapon: {fileID: 6384667107425039206, guid: f89dfdb740132de45ab179fae5a954a0, type: 3}
+  prefabWeapon: {fileID: 4897349927667527166, guid: c42a8c87b54b0934f8dd0a0177dd0e1a, type: 3}
   power: {x: 200, y: 400}
 --- !u!4 &1856714936 stripped
 Transform:
@@ -34530,7 +34552,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1989476057 stripped
 Transform:

@@ -3626,7 +3626,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Forest Cliff_159: 1591325829
-      Forest Cliff_90: 823088767
       Forest Cliff_91: -282708182
       Forest Cliff_151: -989666011
       Forest Cliff_1: -2095747780
@@ -3671,7 +3670,6 @@ TextureImporter:
       Forest Cliff_103: 477696222
       Forest Cliff_57: -448773694
       Forest Cliff_14: 1290548360
-      Forest Cliff_150: -1714063686
       Forest Cliff_133: 1043433182
       Forest Cliff_121: -312795560
       Forest Cliff_73: -1146532757
@@ -3779,15 +3777,17 @@ TextureImporter:
       Forest Cliff_152: 910059106
       Forest Cliff_54: -1145064642
       Forest Cliff_145: -1937551859
-      Forest Cliff_42: 2011155101
+      Forest Cliff_90: 823088767
+      Forest Cliff_150: -1714063686
       Forest Cliff_64: 866272715
-      Forest Cliff_162: -1700052496
+      Forest Cliff_42: 2011155101
       Forest Cliff_44: 1294510161
-      Forest Cliff_164: 1804217934
+      Forest Cliff_162: -1700052496
       Forest Cliff_31: -822516371
       Forest Cliff_22: -1191569638
-      Forest Cliff_106: 963794119
+      Forest Cliff_164: 1804217934
       Forest Cliff_66: 1849784132
+      Forest Cliff_106: 963794119
       Forest Cliff_8: 337831415
       Forest Cliff_83: 2125071201
       Forest Cliff_110: 990856345
