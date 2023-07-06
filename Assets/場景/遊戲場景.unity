@@ -32988,6 +32988,8 @@ GameObject:
   - component: {fileID: 190586978}
   - component: {fileID: 190586977}
   - component: {fileID: 190586979}
+  - component: {fileID: 190586980}
+  - component: {fileID: 190586981}
   m_Layer: 0
   m_Name: "\u7378\u8033\u5A18"
   m_TagString: Untagged
@@ -33136,6 +33138,41 @@ MonoBehaviour:
   rig: {fileID: 190586978}
   ani: {fileID: 190586974}
   parRun: "\u958B\u95DC\u8D70\u8DEF"
+--- !u!58 &190586980
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190586973}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!114 &190586981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190586973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a437ec5136236e44910ebed0d1fd981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgExp: {fileID: 1726700493}
+  textLv: {fileID: 1780463788}
+  textExp: {fileID: 1879284523}
+  expNeeds:
+  - 100
+  - 200
+  - 300
 --- !u!1 &426681749
 GameObject:
   m_ObjectHideFlags: 0
@@ -33661,7 +33698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f71421d62edcd4b94402a51bede519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1
+  interval: 5
   prefabEnemy: {fileID: 8943823232353094333, guid: 120f689aa7074c747801e28737c54747, type: 3}
 --- !u!1 &950066618
 GameObject:
@@ -34120,7 +34157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f71421d62edcd4b94402a51bede519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1
+  interval: 5
   prefabEnemy: {fileID: 8943823232353094333, guid: 120f689aa7074c747801e28737c54747, type: 3}
 --- !u!1001 &1518536261
 PrefabInstance:
@@ -34401,7 +34438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f71421d62edcd4b94402a51bede519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1
+  interval: 5
   prefabEnemy: {fileID: 8943823232353094333, guid: 120f689aa7074c747801e28737c54747, type: 3}
 --- !u!1 &1780463786
 GameObject:
@@ -34438,7 +34475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20, y: -20}
+  m_AnchoredPosition: {x: 20.000061, y: -20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1780463788
@@ -34831,7 +34868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f71421d62edcd4b94402a51bede519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1
+  interval: 5
   prefabEnemy: {fileID: 8943823232353094333, guid: 120f689aa7074c747801e28737c54747, type: 3}
 --- !u!4 &1920837344
 Transform:
