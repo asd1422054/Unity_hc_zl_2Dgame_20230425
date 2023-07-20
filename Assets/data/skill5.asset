@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f68bdd797b3b14090b0492733558cf, type: 3}
   m_Name: skill5
   m_EditorClassIdentifier: 
-  skillMame: "\u653B\u64CA\u529B\u589E\u52A0"
+  skillName: "\u589E\u52A0\u653B\u64CA\u529B"
   skillPicture: {fileID: 21300000, guid: 2b9058a09d01e304fa10b4cb7ef24648, type: 3}
   skillDescription: "\u589E\u52A0\u653B\u64CA\u529B\uFF0C\u8B93\u4F60\u66F4\u5FEB\u6253\u6557\u602A\u7269\uFF0C\u6BCF\u7D1A\u589E\u52A050\u9EDE"
   skillLv: 1
