@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Fungus;
+using UnityEngine;
 
 public class EnemySystem : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class EnemySystem : MonoBehaviour
 	public DataEnemy data;
 
 	private Transform player;
+	private float timer;
 
 	private void OnDrawGizmos()
 	{
@@ -26,6 +28,14 @@ public class EnemySystem : MonoBehaviour
 		if(distance > data.attackRamge)
 		{
 			transform.position = Vector3.MoveTowards(transform.position, player.position, data.moveSpeed * Time.deltaTime);
+		}
+
+		else
+		{
+			print("<color=#f96>進入攻擊範圍</color>");
+
+			timer += Time.deltaTime;
+			print($"<color=#9f4>計時器 : {timer}</color>");
 		}
 	}
 
