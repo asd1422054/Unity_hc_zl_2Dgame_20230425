@@ -134,6 +134,7 @@ public class LevelManager : MonoBehaviour
 	{
 		int lv = dataSkills[0].skillLv - 1;
 		weaponSystemSword.interval = dataSkills[0].skillValues[lv];
+		weaponSystemSword.Restart();
 	}
 
 	[Header("玩家資料")]

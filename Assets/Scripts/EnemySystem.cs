@@ -7,6 +7,12 @@ public class EnemySystem : MonoBehaviour
 
 	private Transform player;
 
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = new Color(1, 0, 0.3f, 0.5f);
+		Gizmos.DrawSphere(transform.position, data.attackRamge);
+	}
+
 	private void Awake()
 	{
 		player = GameObject.Find("獸耳娘").transform;
@@ -14,7 +20,13 @@ public class EnemySystem : MonoBehaviour
 
 	private void Update()
 	{
-		transform.position = Vector3.MoveTowards(transform.position, player.position, data.moveSpeed * Time.deltaTime);
+		float distance = Vector3.Distance(transform.position, player.position);
+		print(distance);
+
+		if(distance > data.attackRamge)
+		{
+			transform.position = Vector3.MoveTowards(transform.position, player.position, data.moveSpeed * Time.deltaTime);
+		}
 	}
 
 }

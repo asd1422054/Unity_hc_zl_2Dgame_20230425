@@ -21,6 +21,8 @@ public class WeaponSystem : MonoBehaviour
 		Rigidbody2D rigWeapon  = tempWeapon.GetComponent<Rigidbody2D>();
 
 		rigWeapon.AddForce(power);
+
+		tempWeapon.GetComponent<Weapon>().attack = this.attack;
 	}
 
 	private void Awake()
@@ -28,5 +30,9 @@ public class WeaponSystem : MonoBehaviour
 		InvokeRepeating("SpawnWeapon", 0, interval);
 	}
 
-
+	public void Restart()
+	{
+		CancelInvoke("SpawnWeapon");
+		InvokeRepeating("SpawnWeapon", 0, interval);
+	}
 }
