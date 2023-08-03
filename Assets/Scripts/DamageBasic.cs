@@ -14,12 +14,13 @@ public class DamageBasic : MonoBehaviour
 	private void Awake()
 	{
 		hp = data.hp;
+		hpMax = hp;
 	}
 
 	public virtual void Damage(float damage)
 	{
 		hp -= damage;
-		GameObject tempDamage = Instantiate(prefabDamage, transform.position, transform.rotation);
+		GameObject tempDamage = Instantiate(prefabDamage, transform.position, Quaternion.identity);
 		tempDamage.transform.Find("傷害值文字").GetComponent<TextMeshProUGUI>().text = damage.ToString();
 
 		Destroy(tempDamage, 1.5f);
