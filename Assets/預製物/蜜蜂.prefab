@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4660746139700482984}
   - component: {fileID: 1813825565948757685}
   - component: {fileID: 561224982696965402}
+  - component: {fileID: 630542933}
+  - component: {fileID: 630542932}
   m_Layer: 0
   m_Name: "\u871C\u8702"
   m_TagString: Untagged
@@ -97,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 4660746139700482985}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b86685d4cdffb9408a3c1b6729adb09, type: 2}
+  m_Controller: {fileID: 9100000, guid: 69c579afff459f9469b2dfa1313c0150, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -144,3 +146,30 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.77, y: 1.42}
   m_Direction: 0
+--- !u!114 &630542933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660746139700482985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3dd49317f951924c91eab8cbca5f86f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: dd524252d6f09794fae86145956f930f, type: 2}
+--- !u!114 &630542932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660746139700482985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e877611333b12dd4d9cf4e09c33198e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: dd524252d6f09794fae86145956f930f, type: 2}
+  prefabDamage: {fileID: 2337701944771235798, guid: e18c852f9cd09084290db9eebe90bc00, type: 3}

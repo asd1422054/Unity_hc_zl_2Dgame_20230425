@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988a3c846cc3fb0478406a60fec2a96a, type: 3}
+  m_Name: "\u7B2C\u4E00\u6CE2"
+  m_EditorClassIdentifier: 
+  timeToSpawn: 20
+  prefabEnemy: {fileID: 8943823232353094333, guid: 120f689aa7074c747801e28737c54747, type: 3}
+  intervalSpawn: 2

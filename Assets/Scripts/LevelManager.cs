@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour
 	public GameObject goLvUp;
 	[Header("技能1~3")]
 	public GameObject[] goSkillUI;
+
 	
 	/// <summary>
 	/// 0 武器生成間隔減少
@@ -58,7 +60,7 @@ public class LevelManager : MonoBehaviour
 	{
 		this.exp += exp;
 
-		if (this.exp > expNeeds[lv - 1])
+		if (this.exp >= expNeeds[lv - 1])
 		{
 			this.exp -= expNeeds[lv - 1];
 			lv++;
@@ -80,11 +82,17 @@ public class LevelManager : MonoBehaviour
 
 		for (int i = 0; i < 3; i++)
 		{
+
+			if (i > randomSkill.Count - 1)
+			{
+				goSkillUI[i].SetActive(false);
+			}
+
 			goSkillUI[i].transform.Find("技能名稱").GetComponent<TextMeshProUGUI>().text = randomSkill[i].skillName;
 			goSkillUI[i].transform.Find("技能描述").GetComponent<TextMeshProUGUI>().text = randomSkill[i].skillDescription;
 			goSkillUI[i].transform.Find("技能等級").GetComponent<TextMeshProUGUI>().text = "Lv" + randomSkill[i].skillLv;
 			goSkillUI[i].transform.Find("技能圖示").GetComponent<Image>().sprite = randomSkill[i].skillPicture;
-
+			goSkillUI[i].transform.Find("技能圖片").GetComponent<Image>().sprite = randomSkill[i].skillPicture;
 		}
 	}
 
@@ -110,7 +118,9 @@ public class LevelManager : MonoBehaviour
 		if (randomSkill[indexSkill].skillName == "減少武器生成間隔") UpdateInterval();
 		if (randomSkill[indexSkill].skillName == "生命增加") UpdatePlayerHp();
 		if (randomSkill[indexSkill].skillName == "提升移動速度") UpdateMoveSpeed();
+				
 	}
+
 
 	[Header("獸耳娘 : 圓形碰撞")]
 	public CircleCollider2D playerExpRange;
@@ -154,4 +164,7 @@ public class LevelManager : MonoBehaviour
 		int lv = dataSkills[2].skillLv - 1;
 		controlSystem.moveSpeed = dataSkills[2].skillValues[lv];
 	}
+
+	
+
 }

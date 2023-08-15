@@ -8,16 +8,16 @@ public class DamagePlayer : DamageBasic
     public Image imgHp;
 	[Header("控制系統")]
 	public ControlSystem controlSystem;
-	[Header("武器劍生成點")]
+	[Header("武器生成點")]
 	public WeaponSystem weaponSystem;
 	[Header("結束畫面")]
 	public GameObject goFinal;
 	[Header("結束標題")]
 	public TextMeshProUGUI textFinal;
-
+	
 	//private void Start()
 	//{
-		
+
 	//}
 
 	public override void Damage(float damage)
@@ -30,7 +30,6 @@ public class DamagePlayer : DamageBasic
 	{
 		base.Dead();
 		controlSystem.enabled = false;
-		weaponSystem.Stop();
 		textFinal.text = "你已經死了.........";
 		goFinal.SetActive(true);
 	}

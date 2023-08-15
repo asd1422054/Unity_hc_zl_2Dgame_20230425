@@ -16,13 +16,13 @@ public class WeaponSystem : MonoBehaviour
 
 	private void SpawnWeapon()
 	{
-		GameObject tempWeapon = Instantiate(prefabWeapon, transform.position, transform.rotation);
+	GameObject tempWeapon = Instantiate(prefabWeapon, transform.position, transform.rotation);
 
-		Rigidbody2D rigWeapon  = tempWeapon.GetComponent<Rigidbody2D>();
+	Rigidbody2D rigWeapon  = tempWeapon.GetComponent<Rigidbody2D>();
 
-		rigWeapon.AddForce(power);
+	rigWeapon.AddForce(power);
 
-		tempWeapon.GetComponent<Weapon>().attack = this.attack;
+	tempWeapon.GetComponent<Weapon>().attack = this.attack;
 	}
 
 	private void Awake()
