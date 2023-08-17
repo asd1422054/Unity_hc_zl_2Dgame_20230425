@@ -41,9 +41,10 @@ public class SpawnEnemyManager : MonoBehaviour
                 spawnSystems[i].Reset();
 			}
             
-            index++;
 
-            print("生成的波數 : " + index);
+
+            index++;
+            //print("生成的波數 : " + index);
 		}
     }
 }

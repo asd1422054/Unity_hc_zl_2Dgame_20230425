@@ -139,6 +139,7 @@ public class LevelManager : MonoBehaviour
 		if (randomSkill[indexSkill].skillName == "生命增加") UpdatePlayerHp();
 		if (randomSkill[indexSkill].skillName == "提升移動速度") UpdateMoveSpeed();
 		if (randomSkill[indexSkill].skillName == "旋轉劍") UpdaterotationSpeed();
+		
 	}
 
 
@@ -194,5 +195,5 @@ public class LevelManager : MonoBehaviour
 		swords[lv - 1].SetActive(true);
 	}
 
-
+	
 }

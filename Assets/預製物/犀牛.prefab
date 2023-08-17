@@ -183,3 +183,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 393ff022d8001ed4cb12dc70723d3cc0, type: 2}
   prefabDamage: {fileID: 2337701944771235798, guid: e18c852f9cd09084290db9eebe90bc00, type: 3}
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
