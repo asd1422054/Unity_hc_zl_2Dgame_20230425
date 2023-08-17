@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8305568693636749652}
   - component: {fileID: 8305568693636749659}
   - component: {fileID: 590621759777749393}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u6B66\u5668_\u528D"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,4 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ddaaded24f53f488712f58306c7f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDestory: 1
   attack: 100

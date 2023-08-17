@@ -33,4 +33,10 @@ public class DamagePlayer : DamageBasic
 		textFinal.text = "你已經死了.........";
 		goFinal.SetActive(true);
 	}
+
+	public void Win()
+	{
+		textFinal.text = "恭喜過關";
+		goFinal.SetActive(true);
+	}
 }

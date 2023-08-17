@@ -116,4 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3.5
   distanceEat: 0.4
-  exp: 30
+  exp: 100

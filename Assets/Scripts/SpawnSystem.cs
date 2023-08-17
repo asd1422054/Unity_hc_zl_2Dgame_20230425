@@ -18,4 +18,13 @@ public class SpawnSystem : MonoBehaviour
 	{
 		InvokeRepeating("SpawnEnemy", 0, interval);
 	}
+	///<summary>
+	///重新啟動生成怪物
+	/// </summary>
+	public void Reset()
+	{
+		CancelInvoke();
+		InvokeRepeating("SpawnEnemy", 0, interval);
+	}
+
 }

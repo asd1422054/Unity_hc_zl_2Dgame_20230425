@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "\u7B2C\u4E00\u6CE2"
   m_EditorClassIdentifier: 
   timeToSpawn: 20
-  prefabEnemy: {fileID: 8943823232353094333, guid: 120f689aa7074c747801e28737c54747, type: 3}
+  prefabEnemy: {fileID: 4660746139700482985, guid: eb337f7829fca0f47a3fdded3f0d8593, type: 3}
   intervalSpawn: 2

@@ -15,16 +15,18 @@ public class LevelManager : MonoBehaviour
 	public TextMeshProUGUI textExp;
 	[Header("升級面板")]
 	public GameObject goLvUp;
-	[Header("技能1~3")]
+	[Header("技能")]
 	public GameObject[] goSkillUI;
+	[Header("關閉")]
+	public GameObject btnClose;
 
-	
 	/// <summary>
 	/// 0 武器生成間隔減少
 	/// 1 生命值增加
 	/// 2 移動速度提升
 	/// 3 經驗吸取範圍提升
 	/// 4 攻擊力增加
+	/// 5 旋轉劍的數量
 	/// </summary>
 	[Header("技能資料陣列")]
 	public DataSkill[] dataSkills;
@@ -48,13 +50,25 @@ public class LevelManager : MonoBehaviour
 
 	//private void Start()
 	//{
-		//for (int i =0; i < 10; i++)
-		//{
-	
-			//print($"<color=#6699>i 的值 : {i}</color>");
+	//for (int i =0; i < 10; i++)
+	//{
 
-		//}	
+	//print($"<color=#6699>i 的值 : {i}</color>");
+
+	//}	
 	//}
+
+	private void Update()
+	{
+#if UNITY_EDITOR
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+		{
+			float need = expNeeds[lv - 1];
+			AddExp(need);
+		}
+#endif
+	}
+
 
 	public void AddExp(float exp)
 	{
@@ -92,8 +106,14 @@ public class LevelManager : MonoBehaviour
 			goSkillUI[i].transform.Find("技能描述").GetComponent<TextMeshProUGUI>().text = randomSkill[i].skillDescription;
 			goSkillUI[i].transform.Find("技能等級").GetComponent<TextMeshProUGUI>().text = "Lv" + randomSkill[i].skillLv;
 			goSkillUI[i].transform.Find("技能圖示").GetComponent<Image>().sprite = randomSkill[i].skillPicture;
-			goSkillUI[i].transform.Find("技能圖片").GetComponent<Image>().sprite = randomSkill[i].skillPicture;
 		}
+		if (randomSkill.Count == 0) btnClose.SetActive(true);
+	}
+
+	public void ClickCloseButton()
+	{
+		goLvUp.SetActive(false);
+		Time.timeScale = 1;
 	}
 
 	[ContextMenu("產生經驗值需求資料")]
@@ -118,7 +138,7 @@ public class LevelManager : MonoBehaviour
 		if (randomSkill[indexSkill].skillName == "減少武器生成間隔") UpdateInterval();
 		if (randomSkill[indexSkill].skillName == "生命增加") UpdatePlayerHp();
 		if (randomSkill[indexSkill].skillName == "提升移動速度") UpdateMoveSpeed();
-				
+		if (randomSkill[indexSkill].skillName == "旋轉劍") UpdaterotationSpeed();
 	}
 
 
@@ -131,20 +151,20 @@ public class LevelManager : MonoBehaviour
 		playerExpRange.radius = dataSkills[3].skillValues[lv];
 	}
 
-	[Header("武器劍生成點")]
-	public WeaponSystem weaponSystemSword;
+	[Header("武器生成點")]
+	public WeaponSystem weaponSystem;
 
 	private void UpdateSwordAttack()
 	{
 		int lv = dataSkills[4].skillLv - 1;
-		weaponSystemSword.attack = dataSkills[4].skillValues[lv];
+		weaponSystem.attack = dataSkills[4].skillValues[lv];
 	}
 
 	private void UpdateInterval()
 	{
 		int lv = dataSkills[0].skillLv - 1;
-		weaponSystemSword.interval = dataSkills[0].skillValues[lv];
-		weaponSystemSword.Restart();
+		weaponSystem.interval = dataSkills[0].skillValues[lv];
+		weaponSystem.Restart();
 	}
 
 	[Header("玩家資料")]
@@ -165,6 +185,14 @@ public class LevelManager : MonoBehaviour
 		controlSystem.moveSpeed = dataSkills[2].skillValues[lv];
 	}
 
-	
+	[Header("旋轉劍預置物")]
+	public GameObject[] swords;
+
+	private void UpdaterotationSpeed()
+	{
+		int lv = dataSkills[5].skillLv - 1;
+		swords[lv - 1].SetActive(true);
+	}
+
 
 }

@@ -1,12 +1,22 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class DamageEnemy : DamageBasic
 {
+	[Header("死亡事件")]
+	public UnityEvent onDead;
+	
 	private DataEnemy dataEnemy;
+	private DamagePlayer damagePlayer;
+
 	private void Start()
 	{
 		dataEnemy = (DataEnemy)data;
-		print(dataEnemy.expProbability);
+		//print(dataEnemy.expProbability);
+
+		damagePlayer = GameObject.Find("獸耳娘").GetComponent<DamagePlayer>();
+		if (name.Contains("BOSS"))onDead.AddListener(() => damagePlayer.Win());
+
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
@@ -21,6 +31,7 @@ public class DamageEnemy : DamageBasic
 	protected override void Dead()
 	{
 		base.Dead();
+		onDead.Invoke();
 		Destroy(gameObject);
 
 		//print("隨機值:" + Random.value);
