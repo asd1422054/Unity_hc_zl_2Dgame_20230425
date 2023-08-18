@@ -139,7 +139,7 @@ public class LevelManager : MonoBehaviour
 		if (randomSkill[indexSkill].skillName == "生命增加") UpdatePlayerHp();
 		if (randomSkill[indexSkill].skillName == "提升移動速度") UpdateMoveSpeed();
 		if (randomSkill[indexSkill].skillName == "旋轉劍") UpdaterotationSpeed();
-		
+		if (randomSkill[indexSkill].skillName == "迴旋鏢") Updateboomerang();
 	}
 
 
@@ -194,6 +194,13 @@ public class LevelManager : MonoBehaviour
 		int lv = dataSkills[5].skillLv - 1;
 		swords[lv - 1].SetActive(true);
 	}
+		[Header("迴旋鏢預置物")]
+	public GameObject[] boomerang;
 
-	
+	private void Updateboomerang()
+	{
+		int lv = dataSkills[6].skillLv - 1;
+		boomerang[lv - 1].SetActive(true);
+	}
+
 }

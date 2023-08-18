@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BOSS
   m_EditorClassIdentifier: 
   hp: 5000
-  attack: 600
+  attack: 1000
   moveSpeed: 10
   expProbability: 0.7
   prefabExp: {fileID: 2382250523714483799, guid: 8f39f5ac885909044917ae4f6b9af74d, type: 3}
-  attackRamge: 4
+  attackRamge: 6
   attackInterval: 1
