@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour
 	/// 3 經驗吸取範圍提升
 	/// 4 攻擊力增加
 	/// 5 旋轉劍的數量
+	/// 6迴旋鏢的數量
 	/// </summary>
 	[Header("技能資料陣列")]
 	public DataSkill[] dataSkills;
@@ -140,6 +141,7 @@ public class LevelManager : MonoBehaviour
 		if (randomSkill[indexSkill].skillName == "提升移動速度") UpdateMoveSpeed();
 		if (randomSkill[indexSkill].skillName == "旋轉劍") UpdaterotationSpeed();
 		if (randomSkill[indexSkill].skillName == "迴旋鏢") Updateboomerang();
+		
 	}
 
 
@@ -154,18 +156,55 @@ public class LevelManager : MonoBehaviour
 
 	[Header("武器生成點")]
 	public WeaponSystem weaponSystem;
+	public WeaponSystem weaponSystem1;
+	public WeaponSystem weaponSystem2;
+	public WeaponSystem weaponSystem3;
+	public WeaponSystem weaponSystem4;
+	public WeaponSystem weaponSystem5;
 
+	//增加攻擊力
 	private void UpdateSwordAttack()
 	{
 		int lv = dataSkills[4].skillLv - 1;
-		weaponSystem.attack = dataSkills[4].skillValues[lv];
+		weaponSystem.attack = dataSkills[4].skillValues[lv]; 
+
+		weaponSystem1.attack = dataSkills[4].skillValues[lv];
+
+		weaponSystem2.attack = dataSkills[4].skillValues[lv];
+
+		weaponSystem3.attack = dataSkills[4].skillValues[lv];
+
+		weaponSystem4.attack = dataSkills[4].skillValues[lv];
+
+		weaponSystem5.attack = dataSkills[4].skillValues[lv];
 	}
 
+	//加快攻擊間隔
 	private void UpdateInterval()
 	{
 		int lv = dataSkills[0].skillLv - 1;
 		weaponSystem.interval = dataSkills[0].skillValues[lv];
+
+		weaponSystem1.interval = dataSkills[0].skillValues[lv];
+
+		weaponSystem2.interval = dataSkills[0].skillValues[lv];
+
+		weaponSystem3.interval = dataSkills[0].skillValues[lv];
+
+		weaponSystem4.interval = dataSkills[0].skillValues[lv];
+
+		weaponSystem5.interval = dataSkills[0].skillValues[lv];
 		weaponSystem.Restart();
+
+		weaponSystem1.Restart();
+
+		weaponSystem2.Restart();
+
+		weaponSystem3.Restart();
+
+		weaponSystem4.Restart();
+
+		weaponSystem5.Restart();
 	}
 
 	[Header("玩家資料")]
@@ -194,7 +233,8 @@ public class LevelManager : MonoBehaviour
 		int lv = dataSkills[5].skillLv - 1;
 		swords[lv - 1].SetActive(true);
 	}
-		[Header("迴旋鏢預置物")]
+
+	[Header("迴旋鏢預置物")]
 	public GameObject[] boomerang;
 
 	private void Updateboomerang()

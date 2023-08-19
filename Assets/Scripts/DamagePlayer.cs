@@ -36,6 +36,7 @@ public class DamagePlayer : DamageBasic
 
 	public void Win()
 	{
+		controlSystem.enabled = false;
 		textFinal.text = "恭喜過關";
 		goFinal.SetActive(true);
 	}

@@ -17,8 +17,8 @@ MonoBehaviour:
   skillDescription: "\u589E\u52A0\u653B\u64CA\u529B\uFF0C\u8B93\u4F60\u66F4\u5FEB\u6253\u6557\u602A\u7269"
   skillLv: 1
   skillValues:
-  - 50
   - 100
   - 150
   - 200
   - 250
+  - 300

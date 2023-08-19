@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     {
         if(canDestory)
             {
-                Destroy(gameObject, 5);
+                Destroy(gameObject, 3);
                 
             }
        
