@@ -28,6 +28,7 @@ public class DamagePlayer : DamageBasic
 
 	protected override void Dead()
 	{
+		if (goFinal.activeInHierarchy) return;
 		base.Dead();
 		controlSystem.enabled = false;
 		textFinal.text = "你已經死了.........";
@@ -36,6 +37,7 @@ public class DamagePlayer : DamageBasic
 
 	public void Win()
 	{
+		if (goFinal.activeInHierarchy) return;
 		controlSystem.enabled = false;
 		textFinal.text = "恭喜過關";
 		goFinal.SetActive(true);
