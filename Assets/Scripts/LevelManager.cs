@@ -39,6 +39,14 @@ public class LevelManager : MonoBehaviour
 
 	public float[] expNeeds = { 100, 200, 300 };
 
+	private void Start()
+	{
+		for (int i = 0; i < dataSkills.Length; i++)
+		{
+			dataSkills[i].skillLv = 1;
+		}
+	}
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		//print($"<color=#6699ff>{collision.name}</color>");
