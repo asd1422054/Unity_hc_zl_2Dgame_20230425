@@ -19,6 +19,11 @@ public class DataSkill : ScriptableObject
 		skillLv = 1;
 	}
 
+	private void OnDisable()
+	{
+		skillLv = 1;
+	}
+
 	private void DataSkillOnDisabled()
 	{
 		skillLv = 1;
